@@ -1,0 +1,1 @@
+aws cloudformation deploy --template-file ../awsformation/createS3.json --stack-name createS3stack

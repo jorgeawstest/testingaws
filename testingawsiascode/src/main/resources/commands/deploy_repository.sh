@@ -1,0 +1,1 @@
+aws cloudformation deploy --template-file ../awsformation/createrepository.json --stack-name createRepositorystack

@@ -228,7 +228,7 @@
     <orderEntry type="library" name="Maven: com.vlkan:flatbuffers:1.2.0-3f79e055" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.janino:janino:3.0.8" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.janino:commons-compiler:3.0.8" level="project" />
-    <orderEntry type="library" name="Maven: com.jorgeawstest.testaws:testawsudf:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="testingawsudf" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.5" level="project" />
   </component>
 </module>

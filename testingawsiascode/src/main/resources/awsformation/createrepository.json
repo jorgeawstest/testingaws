@@ -1,0 +1,10 @@
+{
+  "Resources": {
+    "CodeCommit": {
+      "Type": "AWS::CodeCommit::Repository",
+      "Properties": {
+        "RepositoryName": "s3titanic"
+      }
+    }
+  }
+}
