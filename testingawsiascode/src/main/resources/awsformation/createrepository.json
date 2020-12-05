@@ -4,7 +4,7 @@
       "Type": "AWS::CodeCommit::Repository",
       "Properties": {
         "RepositoryName": "s3titanic",
-        "RepositoryDescription": "This is a repository for my project"
+        "RepositoryDescription": "This is a repository for my projectf"
       }
     }
   }
