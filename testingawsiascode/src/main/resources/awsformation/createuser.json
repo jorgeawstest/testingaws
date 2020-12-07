@@ -1,0 +1,10 @@
+{
+  "Resources": {
+    "CodeCommit": {
+      "Type": "AWS::IAM::User",
+      "Properties": {
+        "UserName": "gitsync"
+      }
+    }
+  }
+}
