@@ -1,0 +1,1 @@
+aws cloudformation deploy --template-file ../awsformation/createStepFunction.json --stack-name createStepFunctionstack

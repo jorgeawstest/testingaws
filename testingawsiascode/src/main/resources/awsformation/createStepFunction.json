@@ -1,14 +1,28 @@
+//{
+//  "Type" : "AWS::StepFunctions::StateMachine",
+//  "Properties" : {
+//    "DefinitionS3Location" : S3Location,
+//    "DefinitionString" : String,
+//    "DefinitionSubstitutions" : DefinitionSubstitutions,
+//    "LoggingConfiguration" : LoggingConfiguration,
+//    "RoleArn" : String,
+//    "StateMachineName" : String,
+//    "StateMachineType" : String,
+//    "Tags" : [ TagsEntry, ... ],
+//    "TracingConfiguration" : TracingConfiguration
+//  }
+//}
 {
-  "Type" : "AWS::StepFunctions::StateMachine",
-  "Properties" : {
-    "DefinitionS3Location" : S3Location,
-    "DefinitionString" : String,
-    "DefinitionSubstitutions" : DefinitionSubstitutions,
-    "LoggingConfiguration" : LoggingConfiguration,
-    "RoleArn" : String,
-    "StateMachineName" : String,
-    "StateMachineType" : String,
-    "Tags" : [ TagsEntry, ... ],
-    "TracingConfiguration" : TracingConfiguration
+  "AWSTemplateFormatVersion":"2010-09-09",
+  "Description":"Titanics£ for a Step Functions state machine.",
+  "Resources":{
+    "MyStateMachine":{
+      "Type":"AWS::StepFunctions::StateMachine",
+      "Properties":{
+        "StateMachineName":"HelloWorld-StateMachine",
+        "StateMachineType":"STANDARD",
+        "DefinitionS3Location": "titanicstepMachine.json"
+      }
+    }
   }
 }
