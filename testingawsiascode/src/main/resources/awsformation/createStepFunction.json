@@ -1,0 +1,14 @@
+{
+  "Type" : "AWS::StepFunctions::StateMachine",
+  "Properties" : {
+    "DefinitionS3Location" : S3Location,
+    "DefinitionString" : String,
+    "DefinitionSubstitutions" : DefinitionSubstitutions,
+    "LoggingConfiguration" : LoggingConfiguration,
+    "RoleArn" : String,
+    "StateMachineName" : String,
+    "StateMachineType" : String,
+    "Tags" : [ TagsEntry, ... ],
+    "TracingConfiguration" : TracingConfiguration
+  }
+}
