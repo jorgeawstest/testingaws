@@ -1,17 +1,17 @@
 {
   "AWSTemplateFormatVersion":"2010-09-09",
-  "Description":"Titanics for a Step Functions state machine.",
+  "Description":"Titanic for a Step Functions state machine.",
   "Resources":{
     "MyStateMachine":{
       "Type":"AWS::StepFunctions::StateMachine",
       "Properties":{
-        "StateMachineName":"HelloWorld-StateMachine",
+        "StateMachineName":"Titanic-StateMachine",
         "StateMachineType":"STANDARD",
         "DefinitionS3Location": {
-          "Bucket" : "s3://s3titanic/",
+          "Bucket" : "s3titanic",
           "Key" : "statemachine/titanicstepMachine.json",
           "Version" : String
-        }
+        },
         "RoleArn": "arn:aws:iam::571397504118:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport"
       }
     }

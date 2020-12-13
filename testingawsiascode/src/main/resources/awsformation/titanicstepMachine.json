@@ -1,8 +1,8 @@
 {
-  "StartAt": "DummyState",
-  "TimeoutSeconds": "10",
+  "StartAt": "RunEMR",
+  "TimeoutSeconds": 10,
   "States": {
-    "DummyState": {
+    "RunEMR": {
       "Type": "Pass",
       "End": true
     }
