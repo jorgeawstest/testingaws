@@ -1,27 +1,18 @@
-//{
-//  "Type" : "AWS::StepFunctions::StateMachine",
-//  "Properties" : {
-//    "DefinitionS3Location" : S3Location,
-//    "DefinitionString" : String,
-//    "DefinitionSubstitutions" : DefinitionSubstitutions,
-//    "LoggingConfiguration" : LoggingConfiguration,
-//    "RoleArn" : String,
-//    "StateMachineName" : String,
-//    "StateMachineType" : String,
-//    "Tags" : [ TagsEntry, ... ],
-//    "TracingConfiguration" : TracingConfiguration
-//  }
-//}
 {
   "AWSTemplateFormatVersion":"2010-09-09",
-  "Description":"Titanics£ for a Step Functions state machine.",
+  "Description":"Titanics for a Step Functions state machine.",
   "Resources":{
     "MyStateMachine":{
       "Type":"AWS::StepFunctions::StateMachine",
       "Properties":{
         "StateMachineName":"HelloWorld-StateMachine",
         "StateMachineType":"STANDARD",
-        "DefinitionS3Location": "titanicstepMachine.json"
+        "DefinitionS3Location": {
+          "Bucket" : "s3://s3titanic/",
+          "Key" : "statemachine/titanicstepMachine.json",
+          "Version" : String
+        }
+        "RoleArn": "arn:aws:iam::571397504118:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport"
       }
     }
   }
