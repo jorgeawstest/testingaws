@@ -1,9 +1,48 @@
 {
-  "StartAt": "RunEMR",
+  "StartAt": "Create_Cluster",
   "TimeoutSeconds": 10,
   "States": {
-    "RunEMR": {
-      "Type": "Pass",
+    "Create_Cluster": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::elasticmapreduce:createCluster.sync",
+      "Parameters": {
+        "Name": "MyWorkflowCluster",
+        "VisibleToAllUsers": true,
+        "ReleaseLabel": "emr-5.28.0",
+        "Applications": [
+          {
+            "Name": "Hive"
+          }
+        ],
+        "ServiceRole": "EMR_DefaultRole",
+        "JobFlowRole": "EMR_EC2_DefaultRole",
+        "LogUri": "s3://aws-logs-571397504118-eu-west-1/elasticmapreduce/",
+        "Instances": {
+          "KeepJobFlowAliveWhenNoSteps": false,
+          "InstanceFleets": [
+            {
+              "InstanceFleetType": "MASTER",
+              "Name": "MASTER",
+              "TargetOnDemandCapacity": 1,
+              "InstanceTypeConfigs": [
+                {
+                  "InstanceType": "m4.xlarge"
+                }
+              ]
+            },
+            {
+              "InstanceFleetType": "CORE",
+              "Name": "CORE",
+              "TargetOnDemandCapacity": 1,
+              "InstanceTypeConfigs": [
+                {
+                  "InstanceType": "m4.xlarge"
+                }
+              ]
+            }
+          ]
+        }
+      },
       "End": true
     }
   }
