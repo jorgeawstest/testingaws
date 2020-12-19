@@ -4,14 +4,14 @@
       "Type": "AWS::S3::Bucket",
       "Properties": {
         "AccessControl" : "PublicRead",
-        "BucketName": "s3titanic"
+        "BucketName": "testingaws-titanic"
       }
     },
     "S3FAOSTAT": {
       "Type": "AWS::S3::Bucket",
       "Properties": {
         "AccessControl" : "PublicRead",
-        "BucketName": "faostat"
+        "BucketName": "testingaws-faostat"
       }
     }
   }
