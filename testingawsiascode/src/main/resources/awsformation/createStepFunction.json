@@ -8,7 +8,7 @@
         "StateMachineName":"Titanic-StateMachinee",
         "StateMachineType":"STANDARD",
         "DefinitionS3Location": {
-          "Bucket" : "s3titanic",
+          "Bucket" : "testingaws-titanic",
           "Key" : "statemachine/titanicstepMachine.json"
         },
         "RoleArn": "arn:aws:iam::571397504118:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport"
