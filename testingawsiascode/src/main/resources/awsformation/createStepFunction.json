@@ -5,7 +5,7 @@
     "MyStateMachine":{
       "Type":"AWS::StepFunctions::StateMachine",
       "Properties":{
-        "StateMachineName":"Titanic-StateMachine",
+        "StateMachineName":"Titanic-StateMachinee",
         "StateMachineType":"STANDARD",
         "DefinitionS3Location": {
           "Bucket" : "s3titanic",

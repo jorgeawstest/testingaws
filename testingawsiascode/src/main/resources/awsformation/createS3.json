@@ -1,10 +1,17 @@
 {
   "Resources": {
-    "S3Bucket": {
+    "S3Titanic": {
       "Type": "AWS::S3::Bucket",
       "Properties": {
         "AccessControl" : "PublicRead",
         "BucketName": "s3titanic"
+      }
+    },
+    "S3FAOSTAT": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "AccessControl" : "PublicRead",
+        "BucketName": "faostat"
       }
     }
   }

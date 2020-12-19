@@ -8,7 +8,7 @@
       "Parameters": {
         "Name": "MyWorkflowCluster",
         "VisibleToAllUsers": true,
-        "ReleaseLabel": "emr-5.28.0",
+        "ReleaseLabel": "emr-5.32.0",
         "Applications": [
           {
             "Name": "Hive"
@@ -18,7 +18,7 @@
         "JobFlowRole": "EMR_EC2_DefaultRole",
         "LogUri": "s3://aws-logs-571397504118-eu-west-1/elasticmapreduce/",
         "Instances": {
-          "KeepJobFlowAliveWhenNoSteps": false,
+          "KeepJobFlowAliveWhenNoSteps": true,
           "InstanceFleets": [
             {
               "InstanceFleetType": "MASTER",
