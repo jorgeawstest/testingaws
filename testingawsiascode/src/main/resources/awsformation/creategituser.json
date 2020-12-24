@@ -1,0 +1,13 @@
+{
+  "Resources": {
+    "UserCodeCommit": {
+      "Type": "AWS::IAM::User",
+      "Properties": {
+        "UserName": "gitsync",
+        "Policies": [
+          "AWSCodeCommitPowerUser"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+aws cloudformation deploy --template-file ../awsformation/creategituser.json --stack-name createUserstack --capabilities  CAPABILITY_NAMED_IAM

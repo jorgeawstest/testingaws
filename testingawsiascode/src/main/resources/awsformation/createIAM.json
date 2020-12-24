@@ -1,36 +1,27 @@
 {
   "Resources": {
-    "UserCodeCommit": {
-      "Type": "AWS::IAM::User",
+    "RoleStepFunctions": {
+      "Type": "AWS::IAM::Role",
       "Properties": {
-        "UserName": "gitsync",
-        "Policies": [
-          "AWSCodeCommitPowerUser"
-        ]
+        "RoleName": "testingaws_role1",
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "ec2.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        },
+        "Path": "/"
       }
     }
-//    "RoleStepFunctions": {
-//      "Type": "AWS::IAM::Role",
-//      "Properties": {
-//        "RoleName": "testingaws_role1",
-//        "AssumeRolePolicyDocument": {
-//          "Version": "2012-10-17",
-//          "Statement": [
-//            {
-//              "Effect": "Allow",
-//              "Principal": {
-//                "Service": [
-//                  "ec2.amazonaws.com"
-//                ]
-//              },
-//              "Action": [
-//                "sts:AssumeRole"
-//              ]
-//            }
-//          ]
-//        },
-//        "Path": "/"
-//      }
-//    }
   }
 }
