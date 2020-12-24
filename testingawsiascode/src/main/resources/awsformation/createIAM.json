@@ -1,0 +1,19 @@
+{
+  "Resources": {
+    "UserCodeCommit": {
+      "Type": "AWS::IAM::User",
+      "Properties": {
+        "UserName": "gitsync",
+        "Policies" : ["AWSCodeCommitPowerUser"]
+      },
+      "RoleStepFunctions": {
+        "Type": "AWS::IAM::Role",
+        "Properties": {
+          "Description": "Role to launch StepFunctions",
+          "RoleName": "testingaws-StepFunctionsRole",
+          "Path": "/"
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,1 @@
-aws cloudformation deploy --template-file ../awsformation/createuser.json --stack-name createIAMstack --capabilities  CAPABILITY_NAMED_IAM
+aws cloudformation deploy --template-file ../awsformation/createIAM.json --stack-name createIAMstack --capabilities  CAPABILITY_NAMED_IAM
