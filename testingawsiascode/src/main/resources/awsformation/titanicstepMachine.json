@@ -6,7 +6,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::elasticmapreduce:createCluster.sync",
       "Parameters": {
-        "Name": "MyWorkflowCluster",
+        "Name": "TAWSWorkflowCluster",
         "VisibleToAllUsers": true,
         "ReleaseLabel": "emr-5.32.0",
         "Applications": [

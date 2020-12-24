@@ -2,10 +2,10 @@
   "AWSTemplateFormatVersion":"2010-09-09",
   "Description":"Titanic for a Step Functions state machine.",
   "Resources":{
-    "MyStateMachine":{
+    "TAWSStateMachine":{
       "Type":"AWS::StepFunctions::StateMachine",
       "Properties":{
-        "StateMachineName":"Titanic-StateMachinee",
+        "StateMachineName":"TAWS-Titanic-StateMachine",
         "StateMachineType":"STANDARD",
         "DefinitionS3Location": {
           "Bucket" : "testingaws-titanic",
