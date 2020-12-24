@@ -1,18 +1,43 @@
 {
   "AWSTemplateFormatVersion":"2010-09-09",
   "Description":"Titanic for a Step Functions state machine.",
-  "Resources":{
+  "Resources": {
     "TAWSStateMachine":{
       "Type":"AWS::StepFunctions::StateMachine",
       "Properties":{
-        "StateMachineName":"TAWS-Titanic-StateMachine",
+        "StateMachineName":"TAWS-Titanic-StateMachine2",
         "StateMachineType":"STANDARD",
         "DefinitionS3Location": {
           "Bucket" : "testingaws-titanic",
           "Key" : "statemachine/titanicstepMachine.json"
         },
-        "RoleArn": "arn:aws:iam::571397504118:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport" 
+        "RoleArn": "testingaws_role2"
       }
+    },
+    "TAWSStateMachineRole":{
+      "Type" : "AWS::IAM::Role",
+      "Properties": {
+        "RoleName": "testingaws_role2",
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "states.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        },
+        "Path": "/"
+
+      }
+    }
     }
   }
 }
