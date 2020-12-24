@@ -9,8 +9,16 @@
       "RoleStepFunctions": {
         "Type": "AWS::IAM::Role",
         "Properties": {
-          "Description": "Role to launch StepFunctions",
-          "RoleName": "testingaws-StepFunctionsRole",
+          "AssumeRolePolicyDocument": {
+            "Version" : "2012-10-17",
+            "Statement": [ {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [ "ec2.amazonaws.com" ]
+              },
+              "Action": [ "sts:AssumeRole" ]
+            } ]
+          },
           "Path": "/"
         }
       }
