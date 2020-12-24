@@ -1,1 +1,1 @@
-aws cloudformation deploy --template-file ../awsformation/createStepFunction.json --stack-name createStepFunctionstack
+aws cloudformation deploy --template-file ../awsformation/createStepFunction.json --stack-name createStepFunctionstack --capabilities  CAPABILITY_NAMED_IAM
