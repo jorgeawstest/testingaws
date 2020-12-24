@@ -4,23 +4,31 @@
       "Type": "AWS::IAM::User",
       "Properties": {
         "UserName": "gitsync",
-        "Policies" : ["AWSCodeCommitPowerUser"]
-      },
-      "RoleStepFunctions": {
-        "Type": "AWS::IAM::Role",
-        "Properties": {
-          "AssumeRolePolicyDocument": {
-            "Version" : "2012-10-17",
-            "Statement": [ {
+        "Policies": [
+          "AWSCodeCommitPowerUser"
+        ]
+      }
+    },
+    "RoleStepFunctions": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
               "Effect": "Allow",
               "Principal": {
-                "Service": [ "ec2.amazonaws.com" ]
+                "Service": [
+                  "ec2.amazonaws.com"
+                ]
               },
-              "Action": [ "sts:AssumeRole" ]
-            } ]
-          },
-          "Path": "/"
-        }
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        },
+        "Path": "/"
       }
     }
   }
