@@ -1,0 +1,1 @@
+aws cloudformation deploy --template-file ../awsformation/createEC2.json --stack-name createEC2stack

@@ -39,11 +39,10 @@
           {
             "PolicyName" : "TAWSPolicyName",
             "PolicyDocument" : {
-              "Version": "2012-10-17",
               "Statement" : [ {
                 "Effect" : "Allow",
-                "Action" : [ "lambda:InvokeFunction" ],
-                "Resource": ["arn:aws:states:::elasticmapreduce:createCluster.sync"]
+                "Action" : "lambda:InvokeFunction",
+                "Resource": [ {"Ref" : "arn:aws:states:::elasticmapreduce:createCluster.sync"}]
               }]
             }
           }

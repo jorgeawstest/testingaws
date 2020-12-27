@@ -1,0 +1,11 @@
+{
+  "Resources": {
+    "EC2Instance": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": "ami-01720b5f421cf0179",
+        "KeyName": "new2jorgeawstest"
+      }
+    }
+  }
+}
