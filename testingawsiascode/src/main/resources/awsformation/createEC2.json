@@ -39,6 +39,7 @@
     "TAWSEC2InstanceProfile":{
       "Type": "AWS::IAM::InstanceProfile",
       "Properties": {
+        "InstanceProfileName": "testingaws_instanceprofile",
         "Path": "/",
         "Roles": [ {
           "Ref": "TAWSEC2Role"

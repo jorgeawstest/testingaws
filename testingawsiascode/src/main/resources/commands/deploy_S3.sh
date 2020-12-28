@@ -5,6 +5,8 @@ aws s3 cp titanic.csv s3://testingaws-titanic/inputdata/titanic.csv
 aws s3 cp ../awsformation/titanicstepMachine.json s3://testingaws-titanic/statemachine/titanicstepMachine.json
 rm titanic.csv
 
+aws s3 cp ../awsformation/faodeploydata.sh s3://testingaws-faostat/bin/faodeploydata.sh
+
 # http://www.fao.org/faostat/en/#home
 # wget http://fenixservices.fao.org/faostat/static/bulkdownloads/FAOSTAT.zip
 # aws s3 cp FAOSTAT.zip s3://testingaws-faostat/inputdata/zip/FAOSTAT.zip
