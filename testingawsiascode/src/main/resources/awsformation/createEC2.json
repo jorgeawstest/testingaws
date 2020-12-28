@@ -7,18 +7,16 @@
         "KeyName": "new2jorgeawstest",
         "InstanceType" : "t2.micro",
         "InstanceInitiatedShutdownBehavior": "terminate",
-        "UserData": { "Fn::Base64" : { "Fn::Join" : ["", [
-          "#!/bin/bash -xe\n",
-          "wget http://fenixservices.fao.org/faostat/static/bulkdownloads/FAOSTAT.zip\n",
-          "# Copy file to S3\n",
-          "aws s3 cp FAOSTAT.zip s3://testingaws-faostat/inputdata/zip/FAOSTAT.zip\n"
-        ]]}}
+        "IamInstanceProfile": {
+          "Ref": "TAWSEC2InstanceProfile"
+        }
       }
     },
     "TAWSEC2Role":{
       "Type" : "AWS::IAM::Role",
       "Properties": {
         "RoleName": "testingaws_ec2role",
+        "ManagedPolicyArns": ["arn:aws:iam::aws:policy/AmazonS3FullAccess" ],
         "AssumeRolePolicyDocument": {
           "Version": "2012-10-17",
           "Statement": [
@@ -36,6 +34,15 @@
           ]
         },
         "Path": "/"
+      }
+    },
+    "TAWSEC2InstanceProfile":{
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Path": "/",
+        "Roles": [ {
+          "Ref": "TAWSEC2Role"
+        } ]
       }
     }
   }
