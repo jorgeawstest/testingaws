@@ -12,6 +12,20 @@
         }
       }
     },
+    "EC2Instance": {
+      "Type" : "AWS::EC2::LaunchTemplate",
+      "Properties" : {
+        "LaunchTemplateData" : {
+          "ImageId": "ami-01720b5f421cf0179",
+          "KeyName": "new2jorgeawstest",
+          "InstanceType" : "t2.micro",
+          "IamInstanceProfile": {
+            "Ref": "TAWSEC2InstanceProfile"
+          }
+        },
+        "LaunchTemplateName" : "testingaws_ec2template"
+      }
+    },
     "TAWSEC2Role":{
       "Type" : "AWS::IAM::Role",
       "Properties": {
@@ -39,7 +53,7 @@
     "TAWSEC2InstanceProfile":{
       "Type": "AWS::IAM::InstanceProfile",
       "Properties": {
-        "InstanceProfileName": "testingaws_instanceprofile",
+        "InstanceProfileName": "testingaws_instanceprofile2",
         "Path": "/",
         "Roles": [ {
           "Ref": "TAWSEC2Role"
