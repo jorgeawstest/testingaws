@@ -4,17 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jorgeawstest.testaws</groupId>
-    <artifactId>testingaws</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>testingawssparkfao</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>testingaws</name>
-    <modules>
-        <module>testingawsiascode</module>
-        <module>testingawsoozie</module>
-        <module>testingawssparkexample</module>
-        <module>testingawssparkfao</module>
-        <module>testingawsudf</module>
-    </modules>
+    <name>testingawssparkfao</name>
+    <parent>
+        <artifactId>testingaws</artifactId>
+        <groupId>com.jorgeawstest.testaws</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -69,8 +66,16 @@
             <groupId>org.codehaus.janino</groupId>
             <version>3.0.8</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>com.jorgeawstest.testaws</groupId>
+            <artifactId>testingawsudf</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
+        </dependency>
     </dependencies>
     <build>
         <pluginManagement>

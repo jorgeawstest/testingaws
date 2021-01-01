@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto8
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn test package
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - aws s3 cp testingawssparkfao/target/testingsparkfao-1.0-SNAPSHOT.jar s3://testingaws-faostat/bin/
+artifacts:
+  files:
+    - testingsparkfao/target/testingsparkfao-1.0-SNAPSHOT.jar
+    - appspec.yml
+  discard-paths: yes

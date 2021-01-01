@@ -1,1 +1,1 @@
-aws cloudformation deploy --template-file ../awsformation/createrepository.json --stack-name createRepositorystack
+aws cloudformation deploy --template-file ../awsformation/createrepository.json --stack-name createRepositorystack --capabilities  CAPABILITY_NAMED_IAM
