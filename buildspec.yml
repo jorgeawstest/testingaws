@@ -14,7 +14,7 @@ phases:
       - ls -la
       - ls -la testingawssparkfao/target/
       - aws s3 ls s3://testingaws-faostat/
-#      - aws s3 cp testingawssparkfao/target/testingsparkfao-1.0-SNAPSHOT.jar s3://testingaws-faostat/bin/
+      - aws s3 cp testingawssparkfao/target/testingawssparkfao-1.0-SNAPSHOT.jar s3://testingaws-faostat/bin/
 artifacts:
   files:
     - testingsparkfao/target/testingsparkfao-1.0-SNAPSHOT.jar
