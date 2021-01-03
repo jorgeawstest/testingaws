@@ -11,6 +11,9 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - ls -la
+      - ls -la testingawssparkfao/target/
+      - aws s3 ls s3://testingaws-faostat/
 #      - aws s3 cp testingawssparkfao/target/testingsparkfao-1.0-SNAPSHOT.jar s3://testingaws-faostat/bin/
 artifacts:
   files:
