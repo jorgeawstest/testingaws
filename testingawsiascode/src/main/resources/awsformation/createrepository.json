@@ -164,18 +164,6 @@
                 {
                   "Effect": "Allow",
                   "Action": [
-                    "devicefarm:ListProjects",
-                    "devicefarm:ListDevicePools",
-                    "devicefarm:GetRun",
-                    "devicefarm:GetUpload",
-                    "devicefarm:CreateUpload",
-                    "devicefarm:ScheduleRun"
-                  ],
-                  "Resource": "*"
-                },
-                {
-                  "Effect": "Allow",
-                  "Action": [
                     "lambda:InvokeFunction",
                     "lambda:ListFunctions"
                   ],
@@ -266,18 +254,6 @@
                   "Action": [
                     "codebuild:BatchGetBuilds",
                     "codebuild:StartBuild"
-                  ],
-                  "Resource": "*"
-                },
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "devicefarm:ListProjects",
-                    "devicefarm:ListDevicePools",
-                    "devicefarm:GetRun",
-                    "devicefarm:GetUpload",
-                    "devicefarm:CreateUpload",
-                    "devicefarm:ScheduleRun"
                   ],
                   "Resource": "*"
                 },
