@@ -365,7 +365,9 @@
                             "Ref": "AWS::AccountId"
                           },
                           ":",
-                          "testingaws-codepipeline"
+                          {
+                            "Ref": "CodePipeline"
+                          }
                         ]
                       ]
                     }
