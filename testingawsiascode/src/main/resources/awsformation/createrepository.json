@@ -125,9 +125,20 @@
             }
           ]
         },
+        "ManagedPolicyArns": [
+          {
+            "AWSTemplateFormatVersion": "2010-09-09",
+            "Parameters": {
+              "awsExampleManagedPolicyParameterOne": {
+                "Type": "String",
+                "Description": "AmazonElasticMapReduceFullAccess"
+              }
+            }
+          }
+        ],
         "Policies": [
           {
-            "PolicyName": "TAWS-CodebuildRolePolicyy",
+            "PolicyName": "TAWS-CodebuildRolePolicy",
             "PolicyDocument": {
               "Version": "2012-10-17",
               "Statement": [
