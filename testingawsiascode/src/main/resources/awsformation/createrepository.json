@@ -190,7 +190,8 @@
                     "rds:*",
                     "sqs:*",
                     "ecs:*",
-                    "logs:*"
+                    "logs:*",
+                    "emr:*"
                   ],
                   "Resource": "*"
                 }
