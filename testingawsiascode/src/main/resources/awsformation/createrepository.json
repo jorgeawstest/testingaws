@@ -125,7 +125,7 @@
             }
           ]
         },
-        "ManagedPolicyArns": [ "AmazonElasticMapReduceFullAccess" ],
+        "ManagedPolicyArns": [ "arn:aws:iam::aws:policy/AmazonElasticMapReduceFullAccess" ],
         "Policies": [
           {
             "PolicyName": "TAWS-CodebuildRolePolicyneww",
