@@ -286,7 +286,8 @@
                     "cloudformation:*",
                     "rds:*",
                     "sqs:*",
-                    "ecs:*"
+                    "ecs:*",
+                    "emr:*"
                   ],
                   "Resource": "*"
                 }
