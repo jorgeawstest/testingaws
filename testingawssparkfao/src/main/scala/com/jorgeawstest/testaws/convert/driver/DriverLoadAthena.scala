@@ -9,7 +9,7 @@ import org.apache.spark.sql.functions.col
 object DriverLoadAthena {
 
   lazy val spark: SparkSession = SparkSession.builder()
-    .master("local")
+    .master("cluster")
     .appName("LoadAthenaMasterTable")
     .config(
       "spark.sql.shuffle.partitions",
