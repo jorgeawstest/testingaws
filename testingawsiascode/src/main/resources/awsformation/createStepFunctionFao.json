@@ -1,0 +1,41 @@
+{
+  "AWSTemplateFormatVersion":"2010-09-09",
+  "Description":"FAO for a Step Functions state machine.",
+  "Resources": {
+    "TAWSStateMachine":{
+      "Type":"AWS::StepFunctions::StateMachine",
+      "Properties":{
+        "StateMachineName":"TAWS-FAO-StateMachine",
+        "StateMachineType":"STANDARD",
+        "DefinitionS3Location": {
+          "Bucket" : "testingaws-fao",
+          "Key" : "statemachine/faostepMachine.json"
+        },
+        "RoleArn": {"Ref": "TAWSStateMachineRole"}
+      }
+    },
+    "TAWSStateMachineRole":{
+      "Type" : "AWS::IAM::Role",
+      "Properties": {
+        "RoleName": "testingaws_fao-role2",
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "states.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        },
+        "Path": "/"
+      }
+    }
+  }
+}
