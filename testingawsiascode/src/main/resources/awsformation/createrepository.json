@@ -74,6 +74,39 @@
                 }
               }
             ]
+          },
+          {
+            "Name": "Deploy",
+            "Actions":[
+              {
+                "Name": "DeployFAO",
+                "ActionTypeId": {
+                  "Category": "Deploy",
+                  "Owner": "AWS",
+                  "Version": "1",
+                  "Provider": "CloudFormation"
+                },
+                "InputArtifacts": [
+                  {
+                    "Name": "appbuilt"
+                  }
+                ],
+                "Configuration": {
+                  "ActionMode": "CREATE_UPDATE",
+                  "RoleArn" : {
+                    "Fn::GetAtt": [
+                      "TAWSAWSCloudFormationRole",
+                      "Arn"
+                    ]
+                  },
+                  "Capabilities": "CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND",
+                  "StackName" : "FAO-pipeline-stack",
+                  "TemplatePath" : "my-pipeline-stack::template-export.yml",
+                  "TemplateConfiguration" : "my-pipeline-stack::template-configuration.json"
+                }
+              }
+            ]
+
           }
         ]
       }
@@ -351,6 +384,47 @@
                       ]
                     }
                   ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "TAWSAWSCloudFormationRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "RoleName": "TAWSAWSCloudFormationRole",
+        "Path": "/",
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "cloudformation.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "TAWSAWSCloudFormationRolePolicy",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "iam:CreateRole",
+                    "iam:DeleteRole",
+                  ],
+                  "Resource": "*"
                 }
               ]
             }
