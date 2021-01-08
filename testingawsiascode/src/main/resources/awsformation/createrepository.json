@@ -101,8 +101,8 @@
                   },
                   "Capabilities": "CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND",
                   "StackName" : "FAO-pipeline-stack",
-                  "TemplatePath" : "my-pipeline-stack::template-export.yml",
-                  "TemplateConfiguration" : "my-pipeline-stack::template-configuration.json"
+                  "TemplatePath" : "appbuilt::template-export.yml",
+                  "TemplateConfiguration" : "appbuilt::template-configuration.json"
                 }
               }
             ]
