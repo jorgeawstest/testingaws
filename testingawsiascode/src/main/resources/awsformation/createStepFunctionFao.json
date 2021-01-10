@@ -11,7 +11,12 @@
           "Bucket" : "testingaws-faostat",
           "Key" : "statemachine/faostepMachine.json"
         },
-        "RoleArn": {"Ref": "TAWSStateMachineFAORole"}
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "TAWSStateMachineFAORole",
+            "Arn"
+          ]
+        }
       }
     },
     "TAWSStateMachineFAORole":{
