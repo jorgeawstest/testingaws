@@ -423,7 +423,8 @@
                   "Action": [
                     "iam:CreateRole",
                     "iam:DeleteRole",
-                    "iam:GetRole"
+                    "iam:GetRole",
+                    "s3:*"
                   ],
                   "Resource": "*"
                 }
