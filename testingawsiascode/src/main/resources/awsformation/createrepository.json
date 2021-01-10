@@ -424,6 +424,7 @@
                     "iam:CreateRole",
                     "iam:DeleteRole",
                     "iam:GetRole",
+                    "iam:PutRolePolicy",
                     "s3:*"
                   ],
                   "Resource": "*"
