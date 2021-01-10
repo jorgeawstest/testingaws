@@ -37,7 +37,7 @@
         "Path": "/",
         "Policies": [
           {
-            "PolicyName": "testingaws_fao-role2Policy",
+            "PolicyName": "testingaws_fao_role2Policy",
             "PolicyDocument": {
               "Version": "2012-10-17",
               "Statement": [
