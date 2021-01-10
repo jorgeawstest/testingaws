@@ -8,7 +8,7 @@
         "StateMachineName":"TAWS-FAO-StateMachine",
         "StateMachineType":"STANDARD",
         "DefinitionS3Location": {
-          "Bucket" : "testingaws-fao",
+          "Bucket" : "testingaws-faostat",
           "Key" : "statemachine/faostepMachine.json"
         },
         "RoleArn": {"Ref": "TAWSStateMachineRole"}
