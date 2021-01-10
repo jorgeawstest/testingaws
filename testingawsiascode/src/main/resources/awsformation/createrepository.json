@@ -426,7 +426,8 @@
                     "iam:GetRole",
                     "iam:PutRolePolicy",
                     "s3:*",
-                    "states:CreateStateMachine"
+                    "states:CreateStateMachine",
+                    "states:TagResource"
                   ],
                   "Resource": "*"
                 }
