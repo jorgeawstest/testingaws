@@ -11,13 +11,13 @@
           "Bucket" : "testingaws-faostat",
           "Key" : "statemachine/faostepMachine.json"
         },
-        "RoleArn": {"Ref": "TAWSStateMachineRole"}
+        "RoleArn": {"Ref": "TAWSStateMachineFAORole"}
       }
     },
-    "TAWSStateMachineRole":{
+    "TAWSStateMachineFAORole":{
       "Type" : "AWS::IAM::Role",
       "Properties": {
-        "RoleName": "testingaws_fao-role2",
+        "RoleName": "testingaws_fao-role22",
         "AssumeRolePolicyDocument": {
           "Version": "2012-10-17",
           "Statement": [
